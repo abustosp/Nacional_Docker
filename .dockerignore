@@ -6,3 +6,6 @@ PLUGINSDIR
 client
 mysql
 .gitignore
+import-master.sh
+installation.sh
+

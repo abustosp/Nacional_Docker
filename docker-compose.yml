@@ -1,0 +1,29 @@
+services:
+
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    restart: always
+    environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: master
+        MYSQL_USER: nacional
+        MYSQL_PASSWORD: root
+    ports:
+        - "3306:3306"
+    volumes:
+        - ./mysql:/var/lib/mysql
+        - ./master:/master
+    command: mysql -uroot -proot master < master/master.sql
+
+  nacional:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nacional
+    restart: always
+    ports:
+        - "9000:9000"
+        - "8080:8080"
+    depends_on:
+        - mysql

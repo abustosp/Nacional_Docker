@@ -22,8 +22,9 @@ services:
       dockerfile: Dockerfile
     container_name: nacional
     restart: always
-    ports:
-        - "9000:9000"
-        - "8080:8080"
+    network_mode: "host"
+    # ports:
+    #     - "9000:9000"
+    #     - "8080:8080"
     depends_on:
         - mysql

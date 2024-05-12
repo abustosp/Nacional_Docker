@@ -1,6 +1,6 @@
 # Instalación del Sistema nacional en Servidores
 
-Para poder instalar el  Nacional en un servidor VPS, vamos a tener que seguir una serie de pasos que los iré explicando en distintas secciones, algunas pueden realizarse en distinto orden.
+Para poder instalar el Nacional en un servidor VPS, vamos a tener que seguir una serie de pasos que los iré explicando en distintas secciones, algunas pueden realizarse en distinto orden.
 
 Recomiendo utilizar Ubuntu como SO para el servidor, igualmente en teoría el instalador está dockerizado y debería funcionar sin problemas en otros SO.
 
@@ -16,7 +16,7 @@ Si tenemos git lo descargamos con `git clone https://github.com/abustosp/Naciona
 
 2. Extraemos los binarios, esto lo hacemos con click derecho en el archivo descargado y dependiendo del archivador de ficheros que usemos podemos tener disitntas opciones (recomiendo usar [7Zip](https://www.7-zip.org/) que es gratis y de código abierto).
 
-3. Copiamos/movemos la Carpeta de `server`  a la descargada del repositorio.
+3. Copiamos/movemos la Carpeta de `server` a la descargada del repositorio.
 
 4. Copiamos nuestra licencia en la `carpeta server/cfg` 
 

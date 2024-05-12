@@ -3,7 +3,6 @@ EXEDIR/java_8_64bit.zip
 EXEDIR/mysql_5.5_64bit.msi 
 EXEDIR/openssl_64bit.exe
 PLUGINSDIR
-client
 mysql
 .gitignore
 import-master.sh

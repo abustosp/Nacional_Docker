@@ -11,5 +11,5 @@ RUN apt install openjdk-8-jdk -y
 COPY client /client
 COPY server /server
 
-# Hacer que el contenedor corra nacional_server.jar
-CMD ["java", "-jar", "nacional_server.jar"]
+# Hacer que el contenedor corra nacional_server.jar con los parámetros de memoria especificados
+CMD ["java", "-Xms128M", "-Xmx256M", "-XX:PermSize=128M", "-XX:MaxPermSize=256M", "-jar", "nacional_server.jar"]

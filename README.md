@@ -8,7 +8,7 @@ Se puede utilizar tanto la IP Fija de los servicios de servidores (importante te
 
 ## Descarga de este repositorio de github
 
-si tenemos git lo descargamos con `git clone https://github.com/abustosp/Nacional_Docker.git`, sinó podemos hacer click en code y `Download ZIP`.
+Si tenemos git lo descargamos con `git clone https://github.com/abustosp/Nacional_Docker.git`, sinó podemos hacer click en code y `Download ZIP`.
 
 ## Descarga de los archivos necesarios de Nacional
 
@@ -19,6 +19,12 @@ si tenemos git lo descargamos con `git clone https://github.com/abustosp/Naciona
 3. Copiamos/movemos la Carpeta de `server`  a la descargada del repositorio.
 
 4. Copiamos nuestra licencia en la `carpeta server/cfg` 
+
+5. Modificamos el archivo `server/cfg/nacional.cfg` con el editor de texto que prefiramos cambiamos los siguientes valores:
+   - `net.host=localhost` por `net.host=0.0.0.0`
+   - `web.host=`por `web.host=0.0.0.0`
+   - `web.port=` por `web.port=8080`
+
 
 ## Preparación del servidor
 

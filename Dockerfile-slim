@@ -1,4 +1,4 @@
-FROM openjdk:23-oraclelinux9
+FROM amazoncorretto:8u412-alpine3.16
 
 WORKDIR /server
 

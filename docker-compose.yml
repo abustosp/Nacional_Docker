@@ -19,7 +19,7 @@ services:
   nacional:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-slim
     container_name: nacional
     restart: always
     network_mode: "host"

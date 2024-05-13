@@ -1,7 +1,7 @@
 services:
 
   mysql:
-    image: mysql:5.7
+    image: mysql:5.5.48
     container_name: mysql
     restart: always
     environment:

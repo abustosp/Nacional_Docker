@@ -12,7 +12,7 @@ Si tenemos git lo descargamos con `git clone https://github.com/abustosp/Naciona
 
 ## Descarga de los archivos necesarios de Nacional
 
-1. Desde la página oficial de [Nacional](https://nacionalsoft.com/) vamos a Descargas y después bajamos el [[Nacional Sistema versión de 64 bits](https://nacionalsoft.com/file/Nacional_Sistema_1.7.0_64bit_install.exe).
+1. Desde la página oficial de [Nacional](https://nacionalsoft.com/) vamos a Descargas y después bajamos el [Nacional Sistema versión de 64 bits](https://nacionalsoft.com/file/Nacional_Sistema_1.7.0_64bit_install.exe).
 
 2. Extraemos los binarios, esto lo hacemos con click derecho en el archivo descargado y dependiendo del archivador de ficheros que usemos podemos tener disitntas opciones (recomiendo usar [7Zip](https://www.7-zip.org/) que es gratis y de código abierto).
 

@@ -7,4 +7,6 @@ mysql
 .gitignore
 import-master.sh
 installation.sh
+mysql
+master
 

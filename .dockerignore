@@ -9,4 +9,6 @@ import-master.sh
 installation.sh
 mysql
 master
-
+importar.sh
+creardb.sh
+importar.sh

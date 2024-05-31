@@ -25,10 +25,10 @@ for i in archivos:
     # agregar a importar la línea f'docker exec -ti mysql bash -c "mysql -uroot -proot {database.replace(" ", "_")} < master/{i.split("/")[-1]}"'
     importar.append(f'docker exec -ti mysql bash -c "mysql -uroot -proot {database.replace(" ", "_")} < master/{i.split("/")[-1]}"')
     # agregar a crear la line f'CREATE DATABASE IF NOT EXISTS {database.replace(" ", "_")}'
-    crear.append(f'CREATE DATABASE IF NOT EXISTS {database.replace(" ", "_")};')
+    crear.append('docker exec -ti mysql bash -c "' "mysql -uroot -proot -e 'CREATE DATABASE IF NOT EXISTS " + database.replace(" ", "_") + ";'" + '"')
 
 # Exportar crear a sql
-with open('master/creardatabases.sql', 'w') as f:
+with open('creardb.sh', 'w') as f:
     f.write("\n".join(crear))
     
 # Exportar importar a sh

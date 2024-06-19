@@ -12,8 +12,8 @@ echo "Instalando python-dotenv en un entorno virtual..."
 sudo apt install python3.12-venv -y
 python3 -m venv .venv
 source ./.venv/bin/activate
-sudo apt install python3-pip
-pip3 install python-dotenv -y
+sudo apt install python3-pip -y
+pip3 install python-dotenv
 
 
 # Instalar Docker

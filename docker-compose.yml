@@ -4,11 +4,8 @@ services:
     image: mysql:5.5.48
     container_name: mysql
     restart: always
-    environment:
-        MYSQL_ROOT_PASSWORD: root
-        MYSQL_DATABASE: master
-        MYSQL_USER: nacional
-        MYSQL_PASSWORD: root
+    env_file:
+      - .env
     ports:
         - "3306:3306"
     volumes:

@@ -4,3 +4,4 @@ mysql
 importar.sh
 creardb.sh
 importar.sh
+.venv

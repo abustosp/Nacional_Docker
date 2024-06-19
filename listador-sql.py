@@ -1,6 +1,12 @@
 #from tkinter.filedialog import askdirectory
 import os
 import re
+from dotenv import load_dotenv
+
+
+# leer variables de entorno
+load_dotenv()
+sqlpassword = os.getenv("MYSQL_ROOT_PASSWORD")
 
 #directorio = askdirectory()
 directorio = "master"
@@ -23,9 +29,9 @@ for i in archivos:
                 break
 
     # agregar a importar la línea f'docker exec -ti mysql bash -c "mysql -uroot -proot {database.replace(" ", "_")} < master/{i.split("/")[-1]}"'
-    importar.append(f'docker exec -ti mysql bash -c "mysql -uroot -proot {database.replace(" ", "_")} < master/{i.split("/")[-1]}"')
+    importar.append(f'docker exec -ti mysql bash -c "mysql -uroot -p{sqlpassword} {database.replace(" ", "_")} < master/{i.split("/")[-1]}"')
     # agregar a crear la line f'CREATE DATABASE IF NOT EXISTS {database.replace(" ", "_")}'
-    crear.append('docker exec -ti mysql bash -c "' "mysql -uroot -proot -e 'CREATE DATABASE IF NOT EXISTS " + database.replace(" ", "_") + ";'" + '"')
+    crear.append('docker exec -ti mysql bash -c "' f"mysql -uroot -p{sqlpassword} -e 'CREATE DATABASE IF NOT EXISTS " + database.replace(" ", "_") + ";'" + '"')
 
 # Exportar crear a sql
 with open('creardb.sh', 'w') as f:

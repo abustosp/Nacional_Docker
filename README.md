@@ -22,10 +22,14 @@ Si tenemos git lo descargamos con `git clone https://github.com/abustosp/Naciona
 
 5. Copiamos nuestra licencia en la `carpeta server/cfg` 
 
-6. Modificamos el archivo `server/cfg/nacional.cfg` con el editor de texto que prefiramos cambiamos los siguientes valores:
+6. Agregamos la contraseña de la base de datos en el archivo `.env` en la variable `MYSQL_ROOT_PASSWORD=`
+
+7. Modificamos el archivo `server/cfg/nacional.cfg` con el editor de texto que prefiramos cambiamos los siguientes valores:
    - `net.host=localhost` por `net.host=0.0.0.0`
    - `web.host=`por `web.host=0.0.0.0`
    - `web.port=` por `web.port=8080`
+   - `db.host=localhost` por `db.host=LAP_IP_PÚBLICA_DEL_SERVIDOR`
+   - `db.password=root` por `db.password=LA_CLAVE_DE_LA_BASE_DE_DATOS_DEL_.env`
 
 
 ## Preparación del servidor
@@ -42,7 +46,7 @@ Si tenemos git lo descargamos con `git clone https://github.com/abustosp/Naciona
       
       1. Corremos `bash installation.sh`, para hacer una instalación un poco mas automatizada
       
-      2. Corremos `docker compose -d` y luego que se creen los contenedores `bash import-master.sh`
+      2. Corremos `docker compose -d` y luego que se creen los contenedores realizar la importación de las bases de datos Master y backups con `python3 listador-sql.py` (para crear los archivos de importación), `bash creardb.sh` (para crear las bases de datos) y `bash importar.sh` (para importar los datos). 
 
 ## Preparación de las maquinas cliente (las que se conectan al servidor)
 

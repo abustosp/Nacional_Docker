@@ -1,7 +1,8 @@
 services:
 
   mysql:
-    image: mysql:5.5.48
+    #image: mysql:5.5.48 # Es la versión original que matchea con nacional, no funciona la opción de Backups
+    image: mariadb:10.11.7 # Varsión de MariaDB funcional, si se usa se debe modificar el script del listador
     container_name: mysql
     restart: always
     env_file:

@@ -24,5 +24,8 @@ services:
     # ports:
     #     - "9000:9000"
     #     - "8080:8080"
+    volumes:
+        - ./server:/server
+        - ./client:/client
     depends_on:
         - mysql
